@@ -25,7 +25,16 @@ const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
   if (reqPath === '/') reqPath = '/index.html';
 
-  const filePath = path.join(ROOT, reqPath);
+  let filePath = path.join(ROOT, reqPath);
+
+  // Clean URLs support: resolve extensionless paths to .html
+  if (!path.extname(filePath)) {
+    if (fs.existsSync(filePath + '.html')) {
+      filePath = filePath + '.html';
+    } else if (fs.existsSync(path.join(filePath, 'index.html'))) {
+      filePath = path.join(filePath, 'index.html');
+    }
+  }
 
   // Security: prevent directory traversal
   if (!filePath.startsWith(ROOT)) {

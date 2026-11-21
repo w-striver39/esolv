@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esolv - Redirecting</title>
+  <style>
+    body {
+      background-color: #0c0628;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 3.5px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #f6027e;
+      border-right-color: #ff5e00;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+    }
+  </style>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var lastSegment = path.split('/').filter(Boolean).pop() || '';
+
+      // List of known site pages
+      var validPages = [
+        'about', 'amazon-services', 'case-studies', 'contact',
+        'digital-marketing-services', 'ebay-services', 'etsy-services',
+        'free-consultation', 'pricing', 'services', 'shopify-services',
+        'tiktok-shop-services', 'uk-company-formation', 'us-company-formation',
+        'walmart-services'
+      ];
+
+      if (lastSegment && validPages.indexOf(lastSegment) !== -1) {
+        // Redirect to the .html version preserving query string & hash
+        window.location.replace(path + '.html' + window.location.search + window.location.hash);
+      } else {
+        // Fallback to repository root / homepage
+        var repoBase = path.split('/')[1];
+        if (repoBase && repoBase.indexOf('.') === -1) {
+          window.location.replace('/' + repoBase + '/');
+        } else {
+          window.location.replace('/');
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="spinner"></div>
+  <p>Loading Esolv...</p>
+</body>
+</html>

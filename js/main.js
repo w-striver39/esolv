@@ -290,28 +290,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Auto-mark Active Navigation Item by Current Pathname
-  const pagePath = window.location.pathname.split('/').pop() || 'index.html';
-  const isHome = pagePath === 'index.html' || pagePath === '' || pagePath.endsWith('/') || !pagePath.includes('.html');
+  // Auto-mark Active Navigation Item by Current Pathname & Clean URLs
+  const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+  const pageName = rawPath.replace(/\.html$/, '') || 'index';
+  const isHome = pageName === 'index' || pageName === '';
+
+  // Clean URL: Remove .html from browser address bar seamlessly
+  if (window.location.pathname.endsWith('.html')) {
+    let cleanPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+    if (!cleanPath) cleanPath = '/';
+    try {
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+    } catch (e) {
+      // Ignore if running under restricted file:// protocol
+    }
+  }
 
   const platformPages = [
-    'amazon-services.html',
-    'ebay-services.html',
-    'walmart-services.html',
-    'etsy-services.html',
-    'shopify-services.html',
-    'tiktok-shop-services.html'
+    'amazon-services',
+    'ebay-services',
+    'walmart-services',
+    'etsy-services',
+    'shopify-services',
+    'tiktok-shop-services'
   ];
 
   const servicePages = [
-    'services.html',
-    'digital-marketing-services.html',
-    'uk-company-formation.html',
-    'us-company-formation.html'
+    'services',
+    'digital-marketing-services',
+    'uk-company-formation',
+    'us-company-formation'
   ];
 
   if (!isHome) {
-    if (platformPages.includes(pagePath)) {
+    if (platformPages.includes(pageName)) {
       document.querySelectorAll('.desktop-nav .nav-link, .mobile-nav .mobile-nav-link').forEach(l => {
         const txt = l.textContent.trim().toLowerCase();
         if (txt.startsWith('platform')) {
@@ -324,10 +336,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-      document.querySelectorAll(`.dropdown-link[href="${pagePath}"], .mobile-sublink[href="${pagePath}"]`).forEach(sub => {
-        sub.classList.add('active');
+      document.querySelectorAll('.dropdown-link, .mobile-sublink').forEach(sub => {
+        const h = (sub.getAttribute('href') || '').replace(/\.html$/, '');
+        if (h === pageName) sub.classList.add('active');
       });
-    } else if (servicePages.includes(pagePath)) {
+    } else if (servicePages.includes(pageName)) {
       document.querySelectorAll('.desktop-nav .nav-link, .mobile-nav .mobile-nav-link').forEach(l => {
         const txt = l.textContent.trim().toLowerCase();
         if (txt.startsWith('service')) {
@@ -340,8 +353,9 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-      document.querySelectorAll(`.dropdown-link[href="${pagePath}"], .mobile-sublink[href="${pagePath}"]`).forEach(sub => {
-        sub.classList.add('active');
+      document.querySelectorAll('.dropdown-link, .mobile-sublink').forEach(sub => {
+        const h = (sub.getAttribute('href') || '').replace(/\.html$/, '');
+        if (h === pageName) sub.classList.add('active');
       });
     }
   }

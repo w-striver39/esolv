@@ -254,8 +254,9 @@
   /* -------------------------------------------------------------------------
      7. Active nav link on scroll — Intersection-based (Home page only)
   -------------------------------------------------------------------------- */
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const isHomePage = currentPath === 'index.html' || currentPath === '' || currentPath.endsWith('/') || !currentPath.includes('.html');
+  const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = rawPath.replace(/\.html$/, '') || 'index';
+  const isHomePage = currentPath === 'index' || currentPath === '';
 
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.desktop-nav .nav-link');

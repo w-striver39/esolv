@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#00d2ff"/>
+    </linearGradient>
+    <clipPath id="circleClip1">
+      <circle cx="60" cy="60" r="56"/>
+    </clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="#e2e8f0"/>
+  <circle cx="60" cy="60" r="56" fill="url(#bg1)"/>
+  <g clip-path="url(#circleClip1)">
+    <!-- Body / Suit -->
+    <path d="M60 70 C40 70 20 85 16 115 L104 115 C100 85 80 70 60 70 Z" fill="#1e293b"/>
+    <!-- Shirt -->
+    <polygon points="60,76 46,95 74,95" fill="#ffffff"/>
+    <polygon points="60,78 54,95 66,95" fill="#f1f5f9"/>
+    <!-- Tie -->
+    <polygon points="60,82 56,105 60,115 64,105" fill="#0066ff"/>
+    <!-- Neck -->
+    <rect x="52" y="58" width="16" height="18" rx="4" fill="#fcd34d"/>
+    <!-- Head -->
+    <ellipse cx="60" cy="48" rx="20" ry="24" fill="#fcd34d"/>
+    <!-- Hair -->
+    <path d="M38 42 C38 28 46 22 60 22 C74 22 82 28 82 42 C78 32 70 28 60 28 C50 28 42 32 38 42 Z" fill="#334155"/>
+    <path d="M38 42 L42 52 L40 40 Z" fill="#334155"/>
+    <path d="M82 42 L78 52 L80 40 Z" fill="#334155"/>
+    <!-- Beard / Stubble -->
+    <path d="M44 54 C46 66 52 72 60 72 C68 72 74 66 76 54 C74 64 68 68 60 68 C52 68 46 64 44 54 Z" fill="#475569" opacity="0.3"/>
+    <!-- Eyes -->
+    <ellipse cx="52" cy="48" rx="2.5" ry="3" fill="#1e293b"/>
+    <ellipse cx="68" cy="48" rx="2.5" ry="3" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M53 58 Q60 64 67 58" stroke="#1e293b" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

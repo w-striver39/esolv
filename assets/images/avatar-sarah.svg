@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6027e"/>
+      <stop offset="100%" stop-color="#feb30a"/>
+    </linearGradient>
+    <clipPath id="circleClip2">
+      <circle cx="60" cy="60" r="56"/>
+    </clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="#e2e8f0"/>
+  <circle cx="60" cy="60" r="56" fill="url(#bg2)"/>
+  <g clip-path="url(#circleClip2)">
+    <!-- Long Hair Back -->
+    <path d="M34 40 C32 65 30 90 32 105 L88 105 C90 90 88 65 86 40 Z" fill="#4a2810"/>
+    <!-- Body / Blouse -->
+    <path d="M60 70 C40 70 20 85 16 115 L104 115 C100 85 80 70 60 70 Z" fill="#ffffff"/>
+    <path d="M60 75 L52 90 L68 90 Z" fill="#fcd34d"/>
+    <!-- Neck -->
+    <rect x="53" y="58" width="14" height="18" rx="4" fill="#fed7aa"/>
+    <!-- Head -->
+    <ellipse cx="60" cy="48" rx="19" ry="23" fill="#fed7aa"/>
+    <!-- Hair Front / Style -->
+    <path d="M36 45 C34 26 44 20 60 20 C76 20 86 26 84 45 C80 34 72 26 60 26 C48 26 40 34 36 45 Z" fill="#4a2810"/>
+    <path d="M36 45 C36 60 40 75 42 85 C45 75 45 55 42 45 Z" fill="#4a2810"/>
+    <path d="M84 45 C84 60 80 75 78 85 C75 75 75 55 78 45 Z" fill="#4a2810"/>
+    <!-- Eyes -->
+    <ellipse cx="53" cy="48" rx="2.5" ry="3" fill="#1e293b"/>
+    <ellipse cx="67" cy="48" rx="2.5" ry="3" fill="#1e293b"/>
+    <!-- Cheeks -->
+    <circle cx="48" cy="54" r="3.5" fill="#f43f5e" opacity="0.25"/>
+    <circle cx="72" cy="54" r="3.5" fill="#f43f5e" opacity="0.25"/>
+    <!-- Smile -->
+    <path d="M54 57 Q60 63 66 57" stroke="#e11d48" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

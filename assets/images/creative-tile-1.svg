@@ -1,0 +1,26 @@
+<!-- Tile 1: Dark Luxury A+ Branding -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ct1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0518"/>
+      <stop offset="50%" stop-color="#190e38"/>
+      <stop offset="100%" stop-color="#070312"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#aa771c"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="url(#ct1Bg)"/>
+  <!-- Gold Luxury Border Frame -->
+  <rect x="8" y="8" width="64" height="64" rx="8" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.8"/>
+  <!-- Elegant Brand Monogram & Crown Motif -->
+  <path d="M40 18 L44 24 L52 22 L46 29 L50 36 L40 31 L30 36 L34 29 L28 22 L36 24 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <!-- Luxury Typography lines -->
+  <rect x="22" y="44" width="36" height="3" rx="1.5" fill="url(#goldGrad)"/>
+  <rect x="28" y="51" width="24" height="2" rx="1" fill="#cbd5e1" opacity="0.7"/>
+  <rect x="34" y="57" width="12" height="1.5" rx="0.75" fill="#f6027e" opacity="0.8"/>
+  <!-- Sparkling Star -->
+  <polygon points="62,18 64,22 68,24 64,26 62,30 60,26 56,24 60,22" fill="#ffd700" opacity="0.85"/>
+</svg>

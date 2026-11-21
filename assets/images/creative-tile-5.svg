@@ -1,0 +1,32 @@
+<!-- Tile 5: Cosmetics & Beauty A+ Mockup -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ct5Bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="50%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="url(#ct5Bg)"/>
+  <!-- Podium Stand -->
+  <ellipse cx="40" cy="62" rx="26" ry="8" fill="#fbcfe8" opacity="0.6"/>
+  <!-- Serum / Cosmetic Dropper Bottle -->
+  <rect x="28" y="32" width="24" height="28" rx="6" fill="url(#bottleGrad)"/>
+  <rect x="33" y="38" width="14" height="16" rx="2" fill="#ffffff" opacity="0.9"/>
+  <line x1="36" y1="44" x2="44" y2="44" stroke="#db2777" stroke-width="1.5"/>
+  <line x1="38" y1="48" x2="42" y2="48" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Gold Collar -->
+  <rect x="34" y="27" width="12" height="5" rx="1.5" fill="url(#capGrad)"/>
+  <!-- Dropper Pipette Top -->
+  <path d="M37 27 C37 20 43 20 43 27 Z" fill="#ffffff"/>
+  <!-- Botanical Leaf Accent -->
+  <path d="M52 50 C58 42 66 44 68 38 C62 42 56 46 52 50 Z" fill="#10b981" opacity="0.75"/>
+</svg>

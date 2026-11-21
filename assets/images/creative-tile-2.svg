@@ -1,0 +1,27 @@
+<!-- Tile 2: Lifestyle & Model Product Photography -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ct2Bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff1eb"/>
+      <stop offset="100%" stop-color="#ace0f9"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fbd38d"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="url(#ct2Bg)"/>
+  <!-- Warm Studio Light Glow -->
+  <circle cx="20" cy="20" r="30" fill="#fde68a" opacity="0.35"/>
+  <!-- Model Silhouette holding product -->
+  <circle cx="40" cy="28" r="12" fill="url(#skin)"/>
+  <!-- Hair style -->
+  <path d="M28 28 C26 15 34 12 40 12 C46 12 54 15 52 28 C50 20 46 16 40 16 C34 16 30 20 28 28 Z" fill="#451a03"/>
+  <path d="M28 28 C28 38 32 46 33 52 C35 44 35 32 32 28 Z" fill="#451a03"/>
+  <path d="M52 28 C52 38 48 46 47 52 C45 44 45 32 48 28 Z" fill="#451a03"/>
+  <!-- Shoulders / Sweater -->
+  <path d="M22 68 C22 48 30 44 40 44 C50 44 58 48 58 68 Z" fill="#ea580c"/>
+  <!-- Product Package in Hands -->
+  <rect x="34" y="48" width="16" height="22" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="37" y="53" width="10" height="12" rx="1.5" fill="#f6027e"/>
+</svg>

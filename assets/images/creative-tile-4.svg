@@ -1,0 +1,37 @@
+<!-- Tile 4: Product Packaging & 3D Render -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ct4Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="boxTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="boxLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="boxRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="url(#ct4Bg)"/>
+  <!-- Isometric 3D Premium Delivery Box -->
+  <!-- Top Face -->
+  <polygon points="40,16 64,28 40,40 16,28" fill="url(#boxTop)"/>
+  <!-- Tape strip top -->
+  <polygon points="36,18 44,22 44,38 36,34" fill="#ffffff" opacity="0.65"/>
+  <!-- Left Face -->
+  <polygon points="16,28 40,40 40,64 16,52" fill="url(#boxLeft)"/>
+  <!-- Right Face -->
+  <polygon points="40,40 64,28 64,52 40,64" fill="url(#boxRight)"/>
+  <!-- Shipping Label -->
+  <polygon points="45,39 58,32 58,44 45,51" fill="#ffffff" opacity="0.9"/>
+  <!-- Barcode on label -->
+  <line x1="48" y1="42" x2="48" y2="46" stroke="#0f172a" stroke-width="1.2"/>
+  <line x1="51" y1="40" x2="51" y2="44" stroke="#0f172a" stroke-width="1.5"/>
+  <line x1="54" y1="38" x2="54" y2="42" stroke="#0f172a" stroke-width="1"/>
+</svg>

@@ -1,0 +1,817 @@
+/* ==========================================================================
+   ESOLV - PACKAGES & PRICING PAGE STYLESHEET (css/pricing.css)
+   Strictly following Esolv Core Brand System (#0a0218, #0077ff, #f6027e, #00f0ff)
+   ========================================================================== */
+
+/* Universal Floating Dock & Breadcrumb Guarantees */
+.floating-lead-dock {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(10, 2, 24, 0.88) !important;
+  border: 1px solid rgba(0, 119, 255, 0.35) !important;
+  padding: 8px 12px !important;
+  border-radius: 9999px !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Breadcrumb Navigation Guarantees */
+.breadcrumb-nav {
+  padding: 0 0 clamp(16px, 2.5vw, 24px) 0;
+  margin: 0 0 24px 0 !important;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.breadcrumb-list {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.breadcrumb-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 0.9rem !important;
+  color: #94a3b8 !important;
+}
+
+.breadcrumb-item a {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.breadcrumb-item a:hover {
+  color: #38bdf8 !important;
+}
+
+.breadcrumb-separator {
+  color: #64748b !important;
+  opacity: 0.4 !important;
+  margin: 0 4px !important;
+}
+
+.breadcrumb-item.active {
+  color: #38bdf8 !important;
+  font-weight: 700 !important;
+}
+
+/* Universal Layout Container (Identical to About, Services, Contact) */
+.container,
+.pricing-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .pricing-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .pricing-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* Base Pricing Body */
+.pricing-page-body {
+  background-color: var(--color-bg-deep, #0a0218);
+  color: var(--color-text-main, #ffffff);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Hero Section */
+.pricing-hero {
+  position: relative;
+  padding: calc(var(--header-height, 86px) + 50px) 0 70px;
+  background: radial-gradient(circle at 50% 15%, rgba(0, 119, 255, 0.16) 0%, rgba(10, 2, 24, 0) 70%),
+              radial-gradient(circle at 85% 35%, rgba(246, 2, 126, 0.12) 0%, rgba(10, 2, 24, 0) 60%),
+              #0a0218;
+}
+
+.pricing-hero-container {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 119, 255, 0.12);
+  border: 1px solid rgba(0, 119, 255, 0.35);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 22px;
+  letter-spacing: 0.02em;
+}
+
+.pricing-hero-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.pricing-hero-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Billing Cycle Toggle Switch */
+.billing-toggle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(19, 9, 43, 0.85);
+  border: 1px solid rgba(0, 119, 255, 0.3);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  margin-top: 15px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.billing-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.billing-label.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.switch-control {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch-control input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #334155;
+  transition: .3s ease;
+  border-radius: 34px;
+}
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .3s ease;
+  border-radius: 50%;
+}
+
+input:checked + .slider-round {
+  background: linear-gradient(135deg, #0077ff, #00f0ff);
+}
+
+input:checked + .slider-round:before {
+  transform: translateX(24px);
+}
+
+.discount-badge-pill {
+  background: rgba(246, 2, 126, 0.2);
+  border: 1px solid rgba(246, 2, 126, 0.4);
+  color: #f6027e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   CATEGORY SELECTOR STICKY BAR (Aligned with Dynamic Header Height)
+   ========================================================================== */
+.pricing-category-bar {
+  padding: 22px 0;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: var(--header-height, 86px);
+  z-index: 45;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-filter-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.price-pill-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.price-pill-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  color: #0a1629;
+}
+
+.price-pill-btn.active {
+  background: linear-gradient(135deg, #0077ff, #0056b3);
+  border-color: #0077ff;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 119, 255, 0.35);
+}
+
+/* ==========================================================================
+   PACKAGE CLUSTER SECTION HEADINGS & GRIDS (Clean White Section #ffffff)
+   ========================================================================== */
+.packages-content-sec {
+  padding: 60px 0 90px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  z-index: 2;
+}
+
+.cluster-wrapper {
+  margin-bottom: 75px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cluster-header {
+  margin-bottom: 35px;
+}
+
+.cluster-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0077ff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.cluster-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: #0a1629;
+  margin-bottom: 10px;
+}
+
+.cluster-desc {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* 3-Column Package Cards Grid */
+.packages-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* 2-Column Package Cards Grid */
+.packages-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Individual Package Card */
+.pkg-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.pkg-card:hover {
+  transform: translateY(-6px);
+  border-color: #0077ff;
+  box-shadow: 0 20px 45px rgba(0, 119, 255, 0.12);
+}
+
+.pkg-card.popular {
+  border: 2px solid #0077ff;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(0, 119, 255, 0.15);
+}
+
+.popular-ribbon {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: linear-gradient(135deg, #f6027e, #0077ff);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(246, 2, 126, 0.3);
+}
+
+.pkg-header {
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 22px;
+}
+
+.pkg-name {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0a1629;
+  margin-bottom: 6px;
+}
+
+.pkg-sub {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.pkg-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pkg-currency {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0077ff;
+}
+
+.pkg-amount {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0a1629;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.pkg-period {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Feature Checklists */
+.pkg-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.pkg-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.pkg-check-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Action CTA Buttons in Card */
+.btn-pkg-action {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-pkg-primary {
+  background: linear-gradient(135deg, #0077ff, #0056b3);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.35);
+}
+
+.btn-pkg-primary:hover {
+  background: linear-gradient(135deg, #0088ff, #0066d6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 119, 255, 0.45);
+}
+
+.btn-pkg-glass {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.btn-pkg-glass:hover {
+  background: #0077ff;
+  border-color: #0077ff;
+  color: #ffffff;
+}
+
+/* Enterprise Special Card */
+.enterprise-card {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border: 1.5px solid #0077ff;
+  border-radius: 24px;
+  padding: 40px 36px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(0, 119, 255, 0.08);
+}
+
+.enterprise-left h3 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0a1629;
+  margin-bottom: 10px;
+}
+
+.enterprise-left p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   FEATURE COMPARISON MATRIX TABLE (Guaranteed Mobile Responsive)
+   ========================================================================== */
+.pricing-matrix-sec {
+  padding: 80px 0;
+  background: #0f0524;
+}
+
+.matrix-header-center {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px;
+}
+
+.pricing-table-card {
+  background: #13092b;
+  border: 1px solid rgba(0, 119, 255, 0.25);
+  border-radius: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.pkg-comp-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pkg-comp-table th {
+  padding: 20px 24px;
+  background: rgba(0, 119, 255, 0.14);
+  color: #ffffff;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 119, 255, 0.25);
+  white-space: nowrap;
+}
+
+.pkg-comp-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
+.pkg-comp-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.table-check-yes {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.table-cross-no {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   PRICING GUARANTEES & TRUST BAR
+   ========================================================================== */
+.pricing-guarantees-sec {
+  padding: clamp(65px, 8vw, 95px) 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  z-index: 2;
+}
+
+.guarantees-header-center {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 45px;
+}
+
+.guarantees-header-center .hero-pill-badge {
+  background: rgba(0, 119, 255, 0.08);
+  border: 1px solid rgba(0, 119, 255, 0.2);
+  color: #0077ff;
+}
+
+.guarantees-header-center h2 {
+  color: #0a1629 !important;
+}
+
+.guarantees-header-center p {
+  color: #64748b !important;
+}
+
+.guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.guarantee-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-5px);
+  border-color: #0077ff;
+  box-shadow: 0 16px 36px rgba(0, 119, 255, 0.12);
+  background: #ffffff;
+}
+
+.guarantee-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 119, 255, 0.08);
+  border: 1px solid rgba(0, 119, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #0077ff;
+  margin-bottom: 18px;
+}
+
+.guarantee-card h4 {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a1629;
+  margin-bottom: 8px;
+}
+
+.guarantee-card p {
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   PRICING FAQ ACCORDION
+   ========================================================================== */
+.pricing-faq-sec {
+  padding: 90px 0;
+  background: #0f0524;
+}
+
+.pricing-faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.pricing-faq-item.active {
+  border-color: rgba(0, 119, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pricing-faq-btn {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-arrow-icon {
+  color: #0077ff;
+  transition: transform 0.25s ease;
+}
+
+.pricing-faq-item.active .faq-arrow-icon {
+  transform: rotate(180deg);
+  color: #00f0ff;
+}
+
+.pricing-faq-ans {
+  padding: 0 24px 22px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  display: none;
+}
+
+.pricing-faq-item.active .pricing-faq-ans {
+  display: block;
+}
+
+/* ==========================================================================
+   FINAL CTA BOX
+   ========================================================================== */
+.pricing-cta-sec {
+  padding: 90px 0;
+  background: linear-gradient(180deg, #0f0524 0%, #0a0218 100%);
+  text-align: center;
+}
+
+.pricing-cta-box {
+  background: linear-gradient(135deg, rgba(0, 119, 255, 0.18), rgba(246, 2, 126, 0.15));
+  border: 1px solid rgba(0, 119, 255, 0.35);
+  border-radius: 28px;
+  padding: 55px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .packages-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .packages-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantees-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enterprise-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-hero {
+    padding: calc(var(--header-height, 68px) + 30px) 0 50px;
+  }
+
+  .pricing-filter-pills {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .price-pill-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .pkg-card {
+    padding: 26px 20px;
+  }
+
+  .pricing-cta-box {
+    padding: 40px 20px;
+  }
+}

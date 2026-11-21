@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <defs>
+    <clipPath id="c4"><circle cx="30" cy="30" r="28"/></clipPath>
+  </defs>
+  <circle cx="30" cy="30" r="30" fill="#e2e8f0"/>
+  <circle cx="30" cy="30" r="28" fill="#ecfdf5"/>
+  <g clip-path="url(#c4)">
+    <!-- Body / Suit -->
+    <path d="M30 38 C18 38 8 46 5 60 L55 60 C52 46 42 38 30 38 Z" fill="#065f46"/>
+    <polygon points="30,42 25,52 35,52" fill="#ffffff"/>
+    <rect x="26" y="32" width="8" height="10" rx="2" fill="#fed7aa"/>
+    <!-- Head -->
+    <ellipse cx="30" cy="25" rx="10" ry="12" fill="#fed7aa"/>
+    <!-- Short Hair & Beard -->
+    <path d="M20 20 C20 12 25 10 30 10 C35 10 40 12 40 20 C37 15 34 13 30 13 C26 13 23 15 20 20 Z" fill="#1e293b"/>
+    <path d="M22 28 C23 34 26 37 30 37 C34 37 37 34 38 28 C37 33 34 35 30 35 C26 35 23 33 22 28 Z" fill="#334155" opacity="0.4"/>
+    <!-- Eyes -->
+    <ellipse cx="26" cy="24" rx="1.5" ry="1.8" fill="#1e293b"/>
+    <ellipse cx="34" cy="24" rx="1.5" ry="1.8" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M27 30 Q30 33 33 30" stroke="#1e293b" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

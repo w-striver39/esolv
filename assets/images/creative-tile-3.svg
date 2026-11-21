@@ -1,0 +1,27 @@
+<!-- Tile 3: Storefront & Brand Design Studio -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ct3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="url(#ct3Bg)"/>
+  <!-- Modern Laptop & Display Canvas -->
+  <rect x="14" y="18" width="52" height="34" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <!-- Screen Interface with UI storefront wireframe -->
+  <rect x="18" y="22" width="44" height="26" rx="2" fill="#0f172a"/>
+  <!-- UI Header -->
+  <rect x="22" y="25" width="12" height="3" rx="1" fill="#f6027e"/>
+  <rect x="44" y="25" width="14" height="2" rx="1" fill="#94a3b8"/>
+  <!-- Hero Banner on Screen -->
+  <rect x="22" y="30" width="36" height="8" rx="2" fill="linear-gradient(90deg, #38bdf8, #818cf8)"/>
+  <!-- Product Grid on Screen -->
+  <rect x="22" y="40" width="10" height="6" rx="1" fill="#334155"/>
+  <rect x="35" y="40" width="10" height="6" rx="1" fill="#334155"/>
+  <rect x="48" y="40" width="10" height="6" rx="1" fill="#334155"/>
+  <!-- Laptop Base -->
+  <path d="M10 52 L70 52 L64 56 L16 56 Z" fill="#64748b"/>
+  <!-- Trackpad -->
+  <rect x="35" y="53" width="10" height="2" rx="0.5" fill="#94a3b8"/>
+</svg>
